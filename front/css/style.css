@@ -1025,6 +1025,17 @@ footer section.stuff-area li a svg:hover {
 	width: 45px;
 }
 
+footer .card-icons--li {
+	margin-right: 5px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+footer .card-icons--li .card-icons--svg-card {
+	height: auto !important;
+	max-width: 30px !important;
+}
+
 footer .footer-top-container {
 	clear: both;
 	padding: 40px 0;
@@ -2318,7 +2329,6 @@ body.home-v2 main .prateleiras button.slick-prev::after {
 }
 
 body.home-v2 main .prateleiras button.slick-next::after {
-	-webkit-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);
 	    transform: rotate(180deg);
 	right: 5px;
@@ -3830,19 +3840,15 @@ body.account-v2 .modal form {
 	left: 50%;
 	width: 100%;
 	max-width: 600px;
-	-webkit-transform: translate(-50%, -50%);
-	    -ms-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
 }
 
 body.account-v2 .modal-header {
-	-webkit-flex-direction: row-reverse;
-	    -ms-flex-direction: row-reverse;
-	        flex-direction: row-reverse;
-	-webkit-align-items: center;
-	    -ms-flex-align: center;
-	            -ms-grid-row-align: center;
-	        align-items: center;
+	-ms-flex-direction: row-reverse;
+	    flex-direction: row-reverse;
+	-ms-flex-align: center;
+	    align-items: center;
 	height: 65px;
 	padding: 15px;
 	color: #fff;
@@ -3851,9 +3857,8 @@ body.account-v2 .modal-header {
 
 body.account-v2 .modal-header h3 {
 	color: #fff;
-	-webkit-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;
+	-ms-flex: 1;
+	    flex: 1;
 	margin: 0;
 	font-size: 1.8em;
 	font-weight: 300;
@@ -3936,9 +3941,8 @@ body.account-v2 .modal-body #business-toggle {
 }
 
 body.account-v2 .modal-footer {
-	-webkit-flex-direction: row-reverse;
-	    -ms-flex-direction: row-reverse;
-	        flex-direction: row-reverse;
+	-ms-flex-direction: row-reverse;
+	    flex-direction: row-reverse;
 	height: 70px;
 	padding: 15px;
 	border: 0;
@@ -4161,9 +4165,8 @@ body.account-v2 .modal-body .vtex-bootstrap .repeat-order #business-toggle {
 
 .myorders .general-info,
 .vtex-bootstrap .general-info {
-	-webkit-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;
+	-ms-flex: 1;
+	    flex: 1;
 	position: relative;
 	padding-bottom: 25px;
 	display: inline-block;
@@ -4632,8 +4635,7 @@ body.account-v2 .slider .address-display-block {
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-	-webkit-transform: translate3d(0, 0, 0);
-	        transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 }
 
 .slick-track {
@@ -4714,9 +4716,8 @@ body.account-v2 .slider .address-display-block {
 	text-align: center;
 	padding: 0;
 	width: auto;
-	-webkit-transform: translateX(-50%);
-	    -ms-transform: translateX(-50%);
-	        transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	    transform: translateX(-50%);
 	top: 35px;
 	right: 0;
 }
@@ -5095,12 +5096,10 @@ body.account-v2 .modal-body .control-group input:not([type="radio"]) {
 
 .myorders .top-row,
 .vtex-bootstrap .top-row {
-	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-flow: row wrap;
-	    -ms-flex-flow: row wrap;
-	        flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	    flex-flow: row wrap;
 	width: 100%;
 }
 

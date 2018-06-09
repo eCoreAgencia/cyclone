@@ -6,30 +6,81 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <vtex:template id="cyclone-V2-commonStyles" />
-		<script type="text/javascript" src="/arquivos/contact.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				var storeName = "cyclone"; //Indica o nome da conta utilizada na API do MasterData
-				var dataEntity = "CO"; //Indica a sigla da entidade de dados utilizada na API do MasterData
-				var htmlElementId = "contactForm"; //Indica o ID do elemento HTML que receberá o formulário
-				var messageLoading = "Carregando..."; //Mensagem de carregamento do formulário (ao salvar)
-				var messageValidation = "Preencha corretamente todos os campos obrigatórios do formulário."; //Mensagem de validação de formulário
-				var messageSuccess = "Contato realizado com sucesso. Em breve nossa equipe entrará em contato com você. Obrigado."; //Mensagem de sucesso
-				var messageError = "Algum erro aconteceu. Tente novamente mais tarde."; //Mensagem de erro
-				FormCreate(storeName, dataEntity, htmlElementId, messageLoading, messageValidation, messageSuccess, messageError);
-			});
-		</script>
 	</head>
 	<body>
-		<vtex:template id="cyclone-V2-header" />
+		<header>
+			<vtex:template id="cyclone-V2-header" />
+		</header>
 
 		<main>
 			<div class="container">
-				<vtex:contentPlaceHolder id="sidebar" />
+				<section class="main-institucional__sidebar col-xs-12 col-md-3">
+					<ul>
+						<li class="tlt-list">Institucional</li>
+						<li>
+							<a href="/institucional/empresa">A Empresa</a>
+						</li>
+						<li>
+							<a href="/institucional/nossas-lojas">Nossas Lojas</a>
+						</li>
+						<li>
+							<a href="/institucional/fale-conosco">Fale Conosco</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="tlt-list">Segurança</li>
+						<li>
+							<a href="/institucional/politica-privacidade">Política de privacidade</a>
+						</li>
+						<li>
+							<a href="/institucional/politica-seguranca">Política de Segurança</a>
+						</li>
+						<li>
+							<a href="/institucional/formas-pagamento">Formas de pagamento</a>
+						</li>
+						<li>
+							<a href="/institucional/prazos-entregas">Prazos de Entrega</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="tlt-list">Ajuda e Suporte</li>
+						<li>
+							<a href="/institucional/duvidas-frequentes">Dúvidas Frequentes</a>
+						</li>
+						<li>
+							<a href="/institucional/trocas-devolucoes">Trocas e devoluções</a>
+						</li>
+						<li>
+							<a href="http://www.procon.rj.gov.br/" target="_blank">Procon-RJ</a>
+						</li>
+					</ul>
+				</section>
 
-				<article class="conteudo">
-					<div id="contactForm"></div>
-				</article>
+				<section class="main-institucional__content col-xs-12 col-md-9">
+					<form action="javascript:formContato()" method="POST" class="form-contato" data-module="contato">
+						<input type="hidden" name="contatoInternalPart" value="contato" />
+						<input type="hidden" name="contatoInternalPage" value="_" />
+						<input type="hidden" name="contatoInternalCampaign" value="contato:opt-in" />
+		
+						<fieldset class="name col-xs-12 col-md-5">
+							<input type="text" name="contatoClientName" id="co_firstName" class="name contato-client-email" placeholder="Nome" data-validation="required" data-msg-required="É preciso inserir seu Nome" />
+						</fieldset>
+		
+						<fieldset class="email col-xs-12 col-md-5">
+							<input type="text" name="contatoClientEmail" id="co_email" class="email" placeholder="E-mail" data-validation="required email" data-msg-required="seu e-mail" data-msg-email="O e-mail que você inseriu está incorreto" />
+						</fieldset>
+		
+						<fieldset class="assunto col-xs-12 col-md-5">
+							<input type="text" name="contatoClientAssunto" id="co_assunto" class="assunto" placeholder="Assunto" data-validation="required assunto" data-msg-required="seu assunto" data-msg-email="É preciso inserir o assunto" />
+						</fieldset>
+		
+						<fieldset class="mensagem col-xs-12 col-md-12">
+							<textarea type="text" name="contatoClientMensagem" id="co_mensagem" class="mensagem" placeholder="Mensagem" data-validation="required mensagem" data-msg-required="sua mensagem" data-msg-email="É preciso inserir sua mensagem"></textarea>
+						</fieldset>
+		
+						<button type="submit" class="contato-button-ok submit col-xs-12 col-md-2">Enviar</button>    
+					</form>
+				</section>
 			</div>
 		</main><!-- main END -->
 
@@ -37,6 +88,7 @@
             <vtex:template id="cyclone-V2-footer" />
         </footer>
 
-        <vtex:template id="cyclone-V2-commonScripts" />
+		<vtex:template id="cyclone-V2-commonScripts" />
+		<script type="text/javascript" src="/arquivos/form-contato-v3.js"></script>
     </body>
 </html>

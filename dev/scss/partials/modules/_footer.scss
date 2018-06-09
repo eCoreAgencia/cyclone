@@ -26,6 +26,19 @@ footer {
 		}
 	}
 
+	.card-icons {
+		&--li {
+			margin-right: 5px;
+			vertical-align: top;
+			display: inline-block;
+
+			.card-icons--svg-card {
+				height: auto !important;
+				max-width: 30px !important;
+			}
+		}
+	}
+
 	.footer-top-container {
 		clear: both;
 		padding: 40px 0;
