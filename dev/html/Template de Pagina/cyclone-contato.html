@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+	<head>
+        <title>Loja On-Line Cyclone - Fale Conosco</title>
+        <vtex:metaTags/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <vtex:template id="cyclone-V2-commonStyles" />
+		<script type="text/javascript" src="/arquivos/contact.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var storeName = "cyclone"; //Indica o nome da conta utilizada na API do MasterData
+				var dataEntity = "CO"; //Indica a sigla da entidade de dados utilizada na API do MasterData
+				var htmlElementId = "contactForm"; //Indica o ID do elemento HTML que receberá o formulário
+				var messageLoading = "Carregando..."; //Mensagem de carregamento do formulário (ao salvar)
+				var messageValidation = "Preencha corretamente todos os campos obrigatórios do formulário."; //Mensagem de validação de formulário
+				var messageSuccess = "Contato realizado com sucesso. Em breve nossa equipe entrará em contato com você. Obrigado."; //Mensagem de sucesso
+				var messageError = "Algum erro aconteceu. Tente novamente mais tarde."; //Mensagem de erro
+				FormCreate(storeName, dataEntity, htmlElementId, messageLoading, messageValidation, messageSuccess, messageError);
+			});
+		</script>
+	</head>
+	<body>
+		<vtex:template id="cyclone-V2-header" />
+
+		<main>
+			<div class="container">
+				<vtex:contentPlaceHolder id="sidebar" />
+
+				<article class="conteudo">
+					<div id="contactForm"></div>
+				</article>
+			</div>
+		</main><!-- main END -->
+
+        <footer>
+            <vtex:template id="cyclone-V2-footer" />
+        </footer>
+
+        <vtex:template id="cyclone-V2-commonScripts" />
+    </body>
+</html>

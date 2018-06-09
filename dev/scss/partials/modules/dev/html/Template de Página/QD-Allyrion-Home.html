@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+	<vtex:contentPlaceHolder id="qd_head_tag" />
+	<title><vtex.cmc:productPageTitle /></title>
+	<vtex:template id="qd-allyrion-head-tags" />
+	<link rel="stylesheet" href="/files/CSS.es.all.home.css" type="text/css" />
+	<meta name="google-site-verification" content="TGqJ8H1weRmma7FQgSYEM29iwUpUqWFWgdyo_I0HhRU" />
+ <script type="text/javascript">
+         function open_modal( id ){
+             var maskHeight = $(document).height();
+             var maskWidth = $(window).width();
+             
+             $('#mask2').css({'width':maskWidth,'height':maskHeight});
+          
+             $('#mask2').fadeIn(1000);    
+         	$('#mask2').fadeTo("slow",0.8);	
+         	
+         	//Get the window height and width
+         	var winH = $(window).height();
+         	var winW = $(window).width();
+                       
+         	$(id).css('top',  winH/2-$(id).height()/2);
+         	$(id).css('left', winW/2-$(id).width()/2);
+         	$(id).fadeIn(2000); 
+         };
+         $(document).ready(function() {	
+         	
+         	/*$('a[name=modal]').click(function(e) {
+         		e.preventDefault();
+         		open_modal( $(this).attr('href') );	
+         	});*/
+         	            if($.cookie("modal") != "1"){
+                    open_modal( '#dialog2' );//abrindo o div#modal ao carregar a página
+                 }
+                 
+         
+         
+         	
+         	$('.window2 .close2').click(function (e) {
+         		e.preventDefault();
+         		
+         		$('#mask2').hide();
+         		$('.window2').hide();
+         	});		
+         	
+         	$('#mask2').click(function () {
+         		$(this).hide();
+         		$('.window2').hide();
+         	});
+         
+         
+         });
+         $(document).ready(function(){
+         
+                     $.cookie("modal", 1);
+         
+         
+         });
+      </script>
+   </head>
+<body class="home" data-qd-scroll-limit="200">
+      <!-- Máscara para cobrir a tela -->
+      <!-- MODAL -->
+      <div id="boxes2">
+         <div id="dialog2" class="window2">
+            <a href="#" class="close2">Não,obrigado.</a>
+            <vtex.cmc:newsletterOptIn/>
+         </div>
+         <!-- Máscara para cobrir a tela -->
+         
+      </div>
+      <div id="mask2" style="opacity:0.5!important;"></div>
+      <!-- FIM MODAL -->
+
+	<!-- qd-allyrion-header -->
+	<vtex:template id="qd-allyrion-header-v2" />
+	<!-- qd-allyrion-header -->
+
+	<!-- Conteúdo abaixo do Header -->
+	<div class="container">
+		<div class="row">
+			<div class="vtx-placeholder vtx-banners-wrap vtx-collections-wrap col-xs-12 qd-banner-responsive img-responsive qd-shelf-xs-3" data-qd-help="1" data-qd-help-id="Conteúdo abaixo do Header">
+				<!-- Conteúdo abaixo do Header -->
+				<vtex:contentPlaceHolder id="Conteúdo abaixo do Header" />
+				<!-- Conteúdo abaixo do Header -->
+			</div>
+		</div>
+	</div>
+	<!-- Conteúdo abaixo do Header -->
+
+	<!-- Slider Principal de Full Banners -->
+	<div class="slider main-slider full-slider clearfix" data-qd-help="2" data-qd-help-id="Slider Principal de Full Banners">
+		<div class="cycle-prev cycle-control cycle-component visible-xs"></div>
+		<div class="cycle-next cycle-control cycle-component visible-xs"></div>
+		
+		<!-- Slider Principal de Full Banners -->
+		<vtex:contentPlaceHolder id="Slider Principal de Full Banners" />
+		<!-- Slider Principal de Full Banners -->
+
+		<div class="container">
+			<div class="row">
+				<div class="responsive-pager"></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- Conteúdo abaixo do Slider Principal -->
+
+	<div class="container">
+		<div class="row">
+			<div class="vtx-placeholder vtx-banners-wrap vtx-collections-wrap col-xs-12 qd-banner-responsive img-responsive qd-shelf-xs-3">
+				<!-- Conteúdo abaixo do Slider Principal -->
+				<vtex:contentPlaceHolder id="Conteúdo abaixo do Slider Principal" />
+				<!-- Conteúdo abaixo do Slider Principal -->
+			</div>
+		</div>
+	</div>
+	<!-- Conteúdo abaixo do Slider Principal -->
+
+	<!-- Mosaico de Banners e Prateleira -->
+	<div class="container padding-b-md padding-b-xl">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<div class="vtx-placeholder vtx-banners-wrap vtx-collections-wrap qd-banner-responsive qd-shelf-xs-12 img-responsive clearfix vtx-banners-overlay-wrap">
+					<!-- Mosaico de Banners e Prateleira -->
+					<vtex:contentPlaceHolder id="Mosaico de Banners e Prateleira" />
+					<!-- Mosaico de Banners e Prateleira -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Mosaico de Banners e Prateleira -->
+	
+	<!-- Conteúdo abaixo do Mosaico -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<div class="vtx-placeholder vtx-banners-wrap vtx-collections-wrap col-xs-12 qd-banner-responsive img-responsive qd-shelf-xs-3">
+					<!-- Conteúdo abaixo do Mosaico -->
+					<vtex:contentPlaceHolder id="Conteúdo Principal" />
+					<!-- Conteúdo abaixo do Mosaico -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Conteúdo abaixo do Mosaico -->
+	<!-- Carrossel de Produtos -->
+	<div class="container padding-t-md padding-b-md padding-b-xxl">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<div class="vtx-placeholder vtx-collections-wrap qd-shelf-xs-3 clearfix qd-shelf-carousel">
+					<!-- Carrossel de Produtos -->
+					<vtex:contentPlaceHolder id="Carrossel de Produtos" />
+					<!-- Carrossel de Produtos -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Carrossel de Produtos -->
+	<!-- Conteúdo abaixo do carrossel de Produtos -->
+	<div class="container">
+		<div class="row">
+			<div class="vtx-placeholder vtx-banners-wrap vtx-collections-wrap col-xs-12 qd-banner-responsive img-responsive qd-shelf-xs-3">
+				<!-- Conteúdo abaixo do carrossel de Produtos -->
+				 <vtex:contentPlaceHolder id="Conteúdo abaixo do Carrossel" />
+				<!-- Conteúdo abaixo do carrossel de Produtos -->
+			</div>
+		</div>
+	</div>
+	<!-- Conteúdo abaixo do carrossel de Produtos -->
+	<div class="container padding-t-md padding-b-md padding-b-xxl">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<div class="vtx-placeholder vtx-collections-wrap clearfix qd-banner-carousel">
+					<vtex:contentPlaceHolder id="Carrossel de Marcas" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Conteúdo acima do Footer -->
+	<div class="container">
+		<div class="row">
+			<div class="vtx-placeholder vtx-banners-wrap vtx-collections-wrap col-xs-12 qd-banner-responsive img-responsive qd-shelf-xs-3">
+				<!-- Conteúdo acima do Footer -->
+				<vtex:contentPlaceHolder id="Conteúdo acima do Footer" />
+				<!-- Conteúdo acima do Footer -->
+			</div>
+		</div>
+	</div>
+	<!-- Conteúdo acima do Footer -->
+	<!-- qd-allyrion-footer -->
+	<vtex:template id="qd-allyrion-footer" />
+	<!-- qd-allyrion-footer -->
+	<script type="text/javascript" src="/files/JS.jquery.cycle2.min.js"></script>
+	<script type="text/javascript" src="/files/JS.jquery.owl.carousel.min.js"></script>
+	<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/integration/0.4.0/rd-js-integration.min.js"></script> 
+<script type="text/javascript">RdIntegration.integrate('296e238359eea40c2dda128037c88751', 'Formulário de contato');</script></body>
+</html>

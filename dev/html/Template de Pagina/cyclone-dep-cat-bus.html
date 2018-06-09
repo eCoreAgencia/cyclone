@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+	<head>
+		<title>Loja On-Line Cyclone</title>
+		<vtex:metaTags/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<vtex:template id="cyclone-V2-commonStyles" />
+		<link rel="stylesheet" type="text/css" href="/arquivos/vtex-smartResearch.css" />
+	</head>
+	<body>
+
+        <header>
+            <vtex:template id="cyclone-V2-header" />
+        </header>
+
+        <main>
+            <div class="row">
+          		<section class="mainShelf col-xs-12 col-md-12">
+          			<div id="nav-dep">
+          				<div class="container">
+	          				<div class="left"><vtex.cmc:breadCrumb /></div>
+	          				<div class="right"></div>
+          				</div>
+          			</div><!-- nav-dep END -->
+          			<div class="banner-departament">
+          				<vtex:contentPlaceHolder id="banner-departamento" />
+          			</div>
+          			<div class="container">
+						<div class="sidebar col-xs-12 col-md-3">
+							<vtex.cmc:searchNavigator/>
+						</div><!-- sidebar END -->
+			            <div class="prateleiras col-xs-12 col-md-9">
+			            	<vtex.cmc:searchResult layout="3111319b-0236-4dc1-884f-2cf60c4b480b" itemCount="18" columnCount="18" />
+			            </div><!-- prateleiras END -->
+          			</div>
+		        </section>
+            </div>
+
+        </main>
+
+        <footer>
+            <vtex:template id="cyclone-V2-footer" />
+        </footer>
+
+		<vtex:template id="cyclone-V2-commonScripts" />
+		<script type="text/javascript" src="/arquivos/vtex-smartResearch.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.orderBy').first().appendTo('#nav-dep .right');
+			});
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,1186 @@
+/* ==========================================================================
+   Página de Produto
+   ========================================================================== */
+
+body.product-v2 {
+
+
+    main{
+        font-family: 'Roboto', sans-serif;
+        .prateleiras {
+            margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
+
+            h3 {
+                @include font-size(1.6);
+            }
+
+            .prateleira {
+                ul {
+                    font-family: 'Roboto', sans-serif;
+                    li {
+                        max-width: 290px;
+                        height: 360px;
+
+                            img{
+                                width: 100%;
+                                height: auto;
+                            }
+                    }
+                }
+            }
+        }
+
+        .notifyme {
+            display: inline !important;
+        }
+
+        section.product-info{
+            margin: 45px 0;
+            overflow: hidden;
+            padding: 30px 0 5px;
+            background-color: #E2E2E2;
+
+            .desc,
+            .frete {
+                @include font-size(1.5);
+                margin-bottom: 25px;
+                line-height: 16px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .desc {
+            
+                font-family: 'Roboto', sans-serif;
+                h2.tlt-row {
+                    @include font-size(1.8);
+                    margin-bottom: 10px;
+                        font-family: 'Roboto', sans-serif;
+
+                }
+            }
+
+            .frete {
+                display: none;
+                padding-left: 70px;
+                
+                .prefixo {
+                    font-weight: bold;
+                }
+
+                .frete,
+                .quantity {
+                    display: none;
+                }
+
+                #calculoFrete .header,
+                #calculoFrete .footer {
+                    display: none;
+                }
+                
+                .cep-busca {
+                    right: 308px;
+                    bottom: -80px;
+                    position: absolute;
+
+                    a {
+                        color: #000;
+                    }
+                }
+
+                #calculoFrete {
+                    position: relative;
+
+                    #txtCep {
+                        top: 30px;
+                        left: -50%;
+                        border: none;
+                        padding: 10px;
+                        margin-left: 340px;
+                        position: absolute;
+                        border-radius: 15px;
+                    }
+
+                    #btnFreteSimulacao {
+                        @include font-size(1.2);
+                        top: 30px;
+                        color: #fff;
+                        right: 268px;
+                        border: none;
+                        padding: 10px;
+                        cursor: pointer;
+                        position: absolute;
+                        text-align: center;
+                        border-radius: 15px;
+                        text-transform: uppercase;
+                        background-color: #464646;
+                    }
+                }
+            }
+        }
+
+        .tabela-de-medidas {
+            text-align: right;
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+                span{
+                    border: 1px solid #000;
+                    font-weight: bold;
+                    padding: 6px 8px;
+                    margin: 0 65px;
+                    cursor: pointer;
+                    color: #000;
+                    background-color: #fff;
+                    border-radius: 9px;
+                    font-family: 'Roboto', sans-serif;
+                    position: absolute;
+                    top: 170px;
+                    right: 0;
+
+                        &:hover{
+                            background-color: #c21116;
+                            color: #fff;
+                        }
+                }
+        }
+
+        .frete-produto {
+                padding-left: 65px;
+                width: 100%;
+                margin-left: 205px;
+                font-family: Roboto,sans-serif;
+                
+                .prefixo {
+                    font-weight: bold;
+                }
+
+                .frete,
+                .quantity {
+                    display: none;
+                }
+
+                #calculoFrete .header,
+                #calculoFrete .footer {
+                    display: none;
+                }
+                
+                .cep-busca {
+                    right: 308px;
+                    bottom: -80px;
+                    position: absolute;
+
+                    a {
+                        color: #000;
+                    }
+                }
+
+                #calculoFrete {
+                    position: relative;
+
+                    #txtCep {
+                        top: 30px;
+                        left: -51%;
+                        padding: 10px;
+                        margin-left: 340px;
+                        position: absolute;
+                        border-radius: 15px;
+                    }
+
+                    #btnFreteSimulacao {
+                        @include font-size(1.3);
+                        top: 30px;
+                        color: #fff;
+                        height: 38px;
+                        right: 268px;
+                        border: none;
+                        padding: 10px;
+                        cursor: pointer;
+                        position: absolute;
+                        text-align: center;
+                        border-radius: 15px;
+                        text-transform: uppercase;
+                        background-color: #464646;
+                    }
+                }
+
+                .freight-values {
+                    margin: 65px 3px 15px -25px;
+                    line-height: 13px;
+                    font-size: 12px;
+                    display: block;
+                    width: 65%;
+
+                        table{
+                            text-align: center;
+                            line-height: 15px;
+                            margin: 0px 25px 0px 0px;
+                            font-weight: 500;
+
+                                td,th{
+                                    border-bottom: 1px solid;
+                                }
+                            }
+                        }
+                    }
+
+
+
+
+        .bread-crumb {
+            margin-top: 20px;
+        }
+
+        .composicao-info {
+            margin: 20px 0 40px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            padding: 40px 0 20px !important;
+        }
+        
+        .portal-notify-me-ref {
+            font-family: 'Roboto', sans-serif;
+            .notifyme-client-name,
+            .notifyme-client-email{
+                width: 330px;
+                height: 40px;
+                font-size: 20px;
+                display: block !important;
+            }
+
+            .notifyme-button-ok {
+                width: 95px !important;
+                height: 30px;
+                font-size: 18px !important;
+            }
+
+            p{
+                margin-bottom: 10px;
+                font-size: 11px;
+                font-weight: bold;
+            }
+            
+        }
+
+        h3.notifymetitle {
+            @include font-size(1.2);
+            margin-bottom: 15px;
+        }
+
+        .sku-notifyme-form {
+            p {
+                margin-bottom: 10px;
+            }
+
+            input {
+                width: 100%;
+                padding: 5px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+
+                &.sku-notifyme-button-ok {
+                    @include font-size(1.4);
+                    @extend .transition;
+                    width: 80px;
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    background-color: #5EC3BB;
+
+                    &:hover {
+                        @extend .transition;
+                        background-color: #666;
+                    }
+                }
+            }
+        }
+
+        #lnkComprar,
+        #lnkVejaMais {
+            @extend .transition;
+            @extend .btn;
+            text-decoration: none;
+        }
+
+        .comprar-junto {
+            margin-bottom: 15px;
+        }
+
+        .buy-together-content {
+            .shelf {
+                li, td {
+                    display: inline-block;
+                }
+            }
+        }
+
+        .tlt-quantidade {
+            @include font-size(1.2);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .product-view{
+            overflow: hidden;
+            margin-top: 30px;
+
+            .product-box{
+                position: relative;
+
+                .apresentacao{
+    				#include{
+                        @include mq($screen-sm) {
+                            margin-left: 120px;
+                            margin-right: 10px;
+                        }
+
+                        a {
+                            display: block;
+                        }
+
+                        .sku-rich-image-main {
+                            display: block;
+                            margin: 0 auto;
+                            width: 100%;
+
+                            @include mq($screen-sm) {
+     
+                            }
+                        }
+    			    }
+
+    			    .zoomPad {
+    				    overflow: hidden;
+    				    position: relative;
+    				    text-align: center;
+
+    				    .zoomWindow {
+    					    width: 100%;
+    					    height: 100%;
+    					    left: 0 !important;
+    					    background: none repeat scroll 0 0 #fff;
+    					}
+    				}
+
+    			    .thumbs {
+                        display: none;
+    				    top: 0;
+    				    left: 0;
+    				    overflow: hidden;
+    				    position: absolute;
+                        
+                        @include mq($screen-sm) {
+                            display: block;
+                        }
+
+    				    li {
+                            width: 100px;
+                            height: 100px;
+    					    margin-bottom: 20px;
+
+    					    &:hover{
+    					    	opacity: 0.8;
+    					    }
+
+    					    a{
+    					    	img{
+                                    width: 100%;
+                                    height: auto;
+    					    	}
+
+    					    	&.ON{
+    						    	img{
+    						    		opacity: 0.8;
+    						    	}
+    						   	}
+    						}
+    					}
+    				}
+    		    }
+            }
+
+            .buy-box {
+                .productName {
+                    @include font-size(2.4);
+                    line-height: 30px;
+                }
+
+                .choose-skus {
+                    clear: both;
+                    float: left;
+                    margin-top: 20px !important;
+                    
+                    ul {
+                        margin-bottom: 20px;
+                    }
+
+                    li {
+                        list-style-type: none;                         
+
+                        &.specification {
+                            @include font-size(1.2);
+                            color: #808185;
+                            display: block;
+                            font-size: 12px;
+                            font-weight: 300;
+                            margin-bottom: 5px;
+                        }
+
+                        &.skuList {
+                            input {
+                                display: none;
+                            }
+
+                            label {
+                                @extend .transition;
+                                @include font-size(1.3);
+                                padding: 8px;
+                                cursor: pointer;
+                                text-align: center;
+                                display: inline-block;
+                                margin: 5px 0 5px 4px;
+                                border: 1px solid #808185;
+
+                                &.dimension-Cor {
+                                    margin: 0;
+                                    padding: 0;
+                                    width: 60px;
+                                    border: none;
+                                    height: 60px;
+                                    text-indent: -15000px;
+                                    background-size: 80% !important;
+
+                                }
+
+                                &.item_unavaliable.disabled,
+                                &.item_doesnt_exist{
+                                    color: #bbb;
+                                    background: url(/arquivos/sku-indisponivel.png) repeat scroll 0 0 transparent;
+                                    background-size: 25px auto;
+
+                                    &:hover {
+                                        color: #000;
+                                        background-color: #eaeaea;
+                                    }
+                                }
+
+                                &:hover,
+                                &.sku-picked {
+                                    @extend .transition;
+                                    color: #fff;
+                                    background-color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .more-about {
+                    overflow: hidden;
+                    margin-top: 20px;
+
+                    .item {
+                        margin-bottom: 20px;
+
+                        h3 {
+                            @include font-size(1.2);
+                            color: #808185;
+                            display: block;
+                            font-weight: 300;
+                            margin-bottom: 5px;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+      
+
+
+                .price-info{
+                    .valor-total{
+                        @include font-size(3.5);
+                        width: 100%;
+                        color: #CD2A2B;
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+
+                    .unidade {
+                        width: 100%;
+                        position: relative;
+                        display: block;
+                        margin: 45px 0 15px;
+
+                        @include mq($screen-sm) {
+                            display: inline-block;
+                            margin: 0 0 85px;
+                        }
+
+                        .valor-de.price-list-price {
+                            @include font-size(1.4);
+                            padding: 10px 0;
+                            text-align: left;
+                            font-style: normal;
+                            text-decoration: line-through;
+                        }                    
+                    }
+
+                    .plugin-preco{
+                        em.economia-de,
+                        p.preco-a-vista {
+                            display: none !important;
+                        }
+
+                        .descricao-preco{
+                            .valor-por{
+                                font-size: 0;
+                                font-style: normal;
+                                margin-bottom: 5px;
+
+                                strong{
+                                    @include font-size(3.4);
+                                    color: #ed3338;
+                                
+                                    &:before {
+                                        content: 'Por: ';
+                                        margin-right: 10px;
+                                        display: inline-block;
+                                    }
+                                }
+                            }
+
+                            .valor-dividido{
+                                @include font-size(1.4);
+                                color: #000;
+                                font-weight: 300;
+                                font-style: normal;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+
+                    .selecao-sku{
+                        width: 100%;
+                        display: block;
+
+                        @include mq($screen-sm) {
+                            width: 60%;
+                            text-align: left;
+                            display: inline-block;
+                            vertical-align: text-bottom;
+                        }
+                        
+                        span{
+                            color: #808185;
+                            display: block;
+                            font-size: 12px;
+                            font-weight: 300;
+                            margin-bottom: 5px;
+                        }
+
+                        .quantidade {
+                            width: 85px;
+                            margin-bottom: 10px;
+                            border: 1px solid #34508d;
+
+                            i {
+                            	@extend .btn;
+                                width: 30%;
+                                color: #fff;
+                                height: 100%;
+                                cursor: pointer;
+                                line-height: 28px;
+                                text-align: center;
+                                font-style: normal;
+                                display: inline-block;
+                                background-color: #34508d;
+
+                                &:hover {
+                                	@extend .btn;
+                                	background-color: #333;
+                                }
+                            }
+
+                            .prodQtd {
+                                @include font-size(1.5);
+                                width: 40%;
+                                text-align: center;
+                                border: medium none;
+                                display: inline-block;
+                                background-color: transparent;
+                            }
+                        }
+                    }
+
+                    .buy-button{
+                        @extend .btn;
+                    	@extend .transition;
+                        @include font-size(2);
+                        font-family: 'Roboto', sans-serif;
+                        float: left;
+                        width: 200px;
+                        height: 60px;
+                        font-weight: 500;
+                        line-height: 42px;
+                        margin-left: 20px;
+                        text-decoration: none;
+                        border: 1px solid #fff;
+                        background-color: #000;
+                        margin-top: 20px;
+                        margin-bottom: 120px;
+
+                        &:hover {
+                            @extend .transition;
+                            color: #fff;
+                            background-color: #c21116;
+                        }
+                    }
+                }
+
+                .aviso-nao-logado{
+                    float: none;
+                    clear: both;
+                    overflow: hidden;
+                    padding: 30px 20px 13px;
+                    border: 2px solid #CDCED0;
+
+                    h4, span, a{
+                        display: block;
+                        margin-bottom: 20px;
+                    }
+
+                    h4{
+                        @include font-size(2.3);
+                        font-weight: 400;
+                    }
+
+                    span{
+                        @include font-size(1.6);
+                        font-weight: 300;
+
+                        a{
+                            @include font-size(1.6);
+                            color: #000;
+                            font-weight: 300;
+                            display: inline-block;
+                            text-decoration: none;
+                        }
+                    }
+
+                    a{
+                        @include font-size(2.3);
+                    }
+                }
+            }
+        }
+
+        div#tabela-medidas-mobile {
+            display: none;
+        }
+
+
+        .shelfRelacionados{
+            height: auto;
+            margin-top: 0;
+            overflow: hidden;
+
+            h2.tlt-row {
+                @include font-size(3.6);
+                color: #000;
+                text-align: left;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+
+        section.compre-junto {
+            overflow: hidden;
+            position: relative;
+            margin: 60px 0 20px;
+
+            h2.tlt-row {
+                @include font-size(3.6);
+                cursor: pointer;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            div.productDescription{
+                 font-family: 'Roboto', sans-serif;
+                  @include font-size(1.7);
+
+
+            }
+            .composicao-info,
+            #caracteristicas {
+                @include font-size(1.4);
+                padding: 20px 0;
+                font-weight: 300;
+                line-height: 20px;
+                text-transform: none;
+                font-family: 'Roboto', sans-serif;
+
+                &.active {
+                    display: block;
+                }
+            }
+
+            #caracteristicas {
+                table {
+                    @include font-size(1.5);
+                    th {
+                        padding-right: 10px;
+                    }
+                    tr {
+                        display: block;
+                        padding: 10px;
+                    }
+                    td {
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+
+        section.compre-junto {
+            margin-top: 0;
+
+            h4#divTitulo {
+                @include font-size(3.6);
+                color: #000;
+                text-align: left;
+                font-weight: bold;
+                margin-bottom: 40px;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+        
+        #buy-together {
+            td.buy {
+                @include font-size(1.5);
+                padding: 20px;
+                line-height: 30px;
+                margin-top: 120px;
+
+                strong {
+                    &:nth-child(4) {
+                        display: block;
+                    }
+                }
+            }
+            
+            .shelf {
+                height: auto;
+            }
+
+            .prateleira{
+                display: inline-block;
+
+            }
+
+            .total-buy-together {
+                @include font-size(1.8);
+                float: right;
+                max-width: 350px;
+                margin-top: 160px;
+                text-align: center;
+                padding: 20px 100px;
+
+                h3 {
+                    margin-bottom: 10px;
+                }
+                
+                span {
+                    display: block;
+                    margin-bottom: 10px;
+                    
+                    &:first-of-type {
+                        &:before {
+                            content: 'R$';
+                            margin-right: 5px;
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                .bt-buy-together {
+                    @include font-size(1.6);
+                    @extend .transition;
+                    color: #fff;
+                    padding: 10px;
+                    cursor: pointer;
+                    text-align: center;
+                    text-transform: uppercase;
+                    background-color: #5ec3bb;
+
+                    &:hover {
+                        @extend .transition;
+                        background-color: #333;
+                    }
+                }
+            }
+
+            .bt-comprar {
+                @include font-size(1.4);
+                @extend .transition;
+                clear: both;
+                color: #fff;
+                height: 60px;
+                width: 200px;
+                margin: 0 auto;
+                font-weight: 500;
+                line-height: 30px;
+                padding: 12px 30px;
+                text-align: center;
+                text-decoration: none;
+                background-color: #7d7d7d;
+                text-transform: uppercase;
+
+                &:hover {
+                    @extend .transition;
+                    background-color: #333;
+                }
+            }
+            
+            .teste {
+                .bestPrice {
+                    &:before,
+                    &:after {
+                        display: inline-block;
+                        text-transform: uppercase;
+                    }
+
+                    &:before {
+                        content: 'R$ ';
+                        margin-right: 5px;
+                    }
+
+                    &:after {
+                        content: '0';
+                    }
+                }
+            }
+
+            li {
+                height: 500px;
+                padding: 10px;
+                max-width: 350px;
+                margin: 0 20px 0 0;
+
+                &:hover {
+                    border: 1px solid #fff !important;
+                }
+
+                .product-desc {
+                    @include font-size(1.4);
+                    height: 90px;
+                    overflow: hidden;
+                    line-height: 23px;
+                    text-transform: none;
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                &:first-child {
+                    &:after {
+                        @include font-size(8);
+                        top: 130px;
+                        right: -4px;
+                        content: "+";
+                        color: #5ec3bb;
+                        margin: 30px 0;
+                        position: absolute;
+                        display: inline-block;
+                    }
+                }
+
+                &.prod-two {
+                    &:after {
+                        @include font-size(8);
+                        top: 130px;
+                        right: -4px;
+                        content: "=";
+                        color: #5ec3bb;
+                        margin: 30px 0;
+                        position: absolute;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        #buytogetherTwo {
+            .principal {
+                img {
+                    display: none;
+
+                    &:first-of-type {
+                        display: block;
+                    }
+                }
+            }
+        }
+    
+        .buy-in-page-quantity {
+            width: 50px;
+            padding: 12px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .buy-in-page-button {
+            @extend .btn;
+            @extend .transition;
+            font-size: 0;
+            float: left;
+            height: 60px;
+            font-weight: 500;
+            line-height: 42px;
+            padding: 8px 20px;
+            text-decoration: none;
+            border: 1px solid #fff;
+            background-color: #E83C3C;
+
+            &:hover {
+                @extend .transition;
+                color: #E83C3C;
+                background-color: #fff;
+                border: 1px solid #5EC3BB;
+            }
+
+            &:after {
+                @include font-size(2);
+                display: inline-block;
+                content: 'Adicionar ao carrinho';
+            }
+        }
+    }
+}  
+.tabelas {
+    display: none;
+    border-top: 14px solid #000;
+    width: 505px;
+    top: 270px;
+    right: 415px;
+    position: absolute;
+    padding: 5px 15px 15px;
+    text-align: center;
+    font-size: 15px;
+    background-color: #fff;
+    z-index: 999;
+    font-family: 'Roboto', sans-serif;
+
+        h3{
+
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        p{
+            font-size: 27px;
+            line-height: 35px;
+            margin-top: 20px;
+            margin-bottom: 16px;
+        }
+
+        span{
+            display: block;
+            cursor: pointer;
+            text-align: right;
+            margin-bottom: 35px;
+            font-size: 11px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        table{
+            tr{
+                border-top:1px solid #34508d;
+                border-bottom:1px solid #34508d;
+                }
+
+                th{
+                    border-right: 1px solid #34508d;
+                    border-left: 1px solid #34508d;
+                    padding: 5px;
+                    text-align: left;
+                }   
+            }        
+        }
+
+    .bg_modal.full_width{
+        display: none;
+        background-color: #000;
+        width: 100%;
+        margin: 0 auto;
+        opacity: .7;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+
+@media screen and (max-width: 1060px) {
+    body.product-v2 {
+        .shelfRelacionados {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    body.product-v2 {
+        main {
+            .product-view {
+                .buy-box {
+                    .productName {
+                        @include font-size(2.1);
+                        line-height: 30px;
+                        margin-bottom: 30px;
+                        text-align: center;
+                    }
+                    .price-info {
+                        .unidade {
+                            clear: both;
+                        }
+
+                        .plugin-preco {
+                            .descricao-preco {
+                                .valor-por {
+                                    strong {
+                                        @include font-size(3.2);
+                                    }
+                                }
+                            }
+                        }
+
+                        .buy-button {
+                            margin: 10px 0 25px 0;
+                        }
+                    }
+                }
+
+                .portal-notify-me-ref {
+                    font-family: 'Roboto', sans-serif;
+                    .notifyme-client-name,
+                    .notifyme-client-email{
+                        width: 100%;
+                        height: 40px;
+                        font-size: 15px;
+                        display: block!important;
+                    }
+
+                    .notifyme-button-ok {
+                        width: 95px !important;
+                        height: 30px;
+                        font-size: 18px !important;
+                    }
+
+                    p{
+                        margin-bottom: 10px;
+                        font-size: 11px;
+                        font-weight: 700;
+                        line-height: 15px;
+                    }  
+                }
+            }
+
+                div#tabela-medidas-mobile {
+                    display: block;
+
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+            .tabela-de-medidas{
+                display: none;
+            }
+
+            .frete-produto{
+                   display: initial;
+
+
+                   label.prefixo {
+                            width: 100%;
+                            text-align: center;
+                            display: block;
+                        }
+
+                    #calculoFrete {
+                        #txtCep {
+                            top: 30px;
+                            padding: 10px;
+                            position: absolute;
+                            border-radius: 15px;
+                            left: -270px;
+                        }
+
+                        #btnFreteSimulacao {
+                            top: 30px;
+                            color: #fff;
+                            height: 38px;
+                            left: 210px;
+                            border: none;
+                            padding: 10px;
+                            position: absolute;
+                            border-radius: 15px;
+                            text-transform: uppercase;
+                            background-color: #464646;
+
+                        }
+
+                    }
+
+                   .quantity{
+                    display: block;
+                    height: 80px;
+                        input{
+                            display: none;
+                        }
+                   }
+
+                   .freight-values{
+                        margin: 35px 0 0 10px;
+                        line-height: 13px;
+                        font-size: 11px;
+                        display: block;
+                        width: 100%;
+                       }
+                    }
+
+            section.product-info {
+                .frete {
+                    display: none;
+
+
+                }
+
+                .desc {
+                    @include font-size(1);
+                    border: none;
+                    line-height: 22px;
+                    font-family: 'Roboto', sans-serif;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 310px) {
+    body.product-v2 {
+        main {
+            .buy-in-page-button {
+                &:after {
+                    @include font-size(1.6);
+                }
+            }
+        }
+    }
+}

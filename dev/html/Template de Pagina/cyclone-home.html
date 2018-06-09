@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    <head>
+        <title>Loja On-Line Cyclone</title>
+        <vtex:metaTags/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <vtex:template id="cyclone-V2-commonStyles" />
+        <script type="text/javascript" src="/arquivos/popUpHome.js"></script>
+        <script type="text/javascript" src="/arquivos/jquery.cookie.js"></script>
+        <script type="text/javascript" src="/arquivos/newsletterMasterData.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <vtex:template id="cyclone-V2-header" />
+        </header>
+
+        <main>
+            <!-- banners-top -->
+                <section class="banners-top">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 slider slide-wrap">
+                            <div class="slide">
+                                <vtex:contentPlaceHolder id="banners-slide" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            <!-- /banners-top -->
+
+            <!-- tip bar -->
+                <section class="tipbar-wrap hidden-xs hidden-sm">
+                    <div class="container">
+                        <div class="row">
+                            <vtex:contentPlaceHolder id="tipbar" />
+                        </div>
+                    </div>
+                </section>
+            <!-- /tip bar -->
+
+            <!-- Banners secundarios -->
+                <section class="banners-secundarios">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-xs-12">
+                                <div class="banner-prateleira">
+                                    <vtex:contentPlaceHolder id="banner-secundarios-one" />
+                                    <div class="text-banner">
+                                        <div class="red-opacity"></div>
+                                        <div class="container">
+                                            <h2><vtex:contentPlaceHolder id="txt-banner-secundario-one" /></h2>
+                                            <a href="/infantil">Veja Mais</a>
+                                        </div>
+                                    </div><!-- text-banner END -->
+                                </div><!-- banner-prateleira END -->
+                            </div><!-- shelf END -->
+                            <div class="col-md-6 col-xs-12">
+                                <div class="banner-prateleira banner-two">
+                                    <vtex:contentPlaceHolder id="banner-secundarios-two" />
+                                    <div class="text-banner">
+                                        <div class="red-opacity"></div>
+                                        <div class="container">
+                                            <h2><vtex:contentPlaceHolder id="txt-banner-secundario-two" /></h2>
+                                            <a href="/masculino/bermuda-veludo?O=OrderByReleaseDateDESC">Veja Mais</a>
+                                        </div>
+                                    </div><!-- text-banner END -->
+                                </div><!-- banner-prateleira END -->
+                            </div><!-- shelf END -->
+                        </div>
+                    </div>
+                </section>
+            <!-- /Banners secundarios -->
+
+            <!-- Prateleiras -->
+                <section class="prateleiras prateleiras-home prateleiras-destaque">
+                    <div class="container">
+                        <h2>Destaques</h2>
+                        <nav class="tabs-destaque">
+                            <ul>
+                                <li><a class="masculino active">Masculino</a></li>
+                                <li><a class="feminino">Feminino</a></li>
+                                <li><a class="infantil">Acessórios e Calçados</a></li>
+                            </ul>
+                        </nav>
+                        <div class="shelf shelf-masculino active">
+                            <div class="slider slide-wrap">
+                                <div class="slideShelf">
+                                    <vtex:contentPlaceHolder id="destaque-masculino" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shelf shelf-feminino">
+                            <div class="slider slide-wrap">
+                                <div class="slideShelf">
+                                    <vtex:contentPlaceHolder id="destaque-feminino" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shelf shelf-infantil">
+                            <div class="slide-shelf-one">
+                                <div class="slideShelf">
+                                    <vtex:contentPlaceHolder id="destaque-infantil" />
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- container END -->
+                </section>
+            <!-- /Prateleiras -->
+
+            <div class="banner-off">
+                <div class="container">
+                    <vtex:contentPlaceHolder id="banner-linha-off" />
+                </div>
+            </div><!-- banner-off END -->
+
+            <!-- Prateleiras -->
+                <section class="prateleiras prateleiras-home prateleiras-lancamento">
+                    <div class="container">
+                        <h2>Lançamentos</h2>
+                        <nav class="tabs-lancamento">
+                            <ul>
+                                <li><a class="masculino active">Masculino</a></li>
+                                <li><a class="feminino">Feminino</a></li>
+                                <li><a class="infantil">Acessórios e Calçados</a></li>
+                            </ul>
+                        </nav>
+                        <div class="shelf shelf-masculino active">
+                            <div class="slider slide-wrap">
+                                <div class="slideShelf">
+                                    <vtex:contentPlaceHolder id="lancamento-masculino" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shelf shelf-feminino">
+                            <div class="slider slide-wrap">
+                                <div class="slideShelf">
+                                    <vtex:contentPlaceHolder id="lancamento-feminino" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shelf shelf-infantil">
+                            <div class="slider slide-wrap">
+                                <div class="slideShelf">
+                                    <vtex:contentPlaceHolder id="lancamento-infantil" />
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- container END -->
+                </section>
+            <!-- /Prateleiras -->
+
+        </main>
+
+        <footer>
+            <vtex:template id="cyclone-V2-footer" />
+        </footer>
+
+  <!-- PopUp Newsletter -->
+        <div class="modal hidden-xs hidden-sm">
+            <div class="opacity"></div>
+            <span class="close-modal">FECHAR</span>
+            <div class="modal-container">
+                <!-- vtex.cmc:newsletterOptIn/ -->
+                <form action="javascript:masterDataNewsletter()" method="POST" class="form-newsletter" data-module="newsletter">
+                    <input type="hidden" name="newsInternalPart" value="newsletter" />
+                    <input type="hidden" name="newsInternalPage" value="_" />
+                    <input type="hidden" name="newsInternalCampaign" value="newsletter:opt-in" />
+
+                    <fieldset class="email">
+                        <input type="text" name="newsletterClientEmail" class="email" placeholder="E-mail" data-validation="required email" data-msg-required="Preencha o seu e-mail" data-msg-email="O e-mail que você inseriu está incorreto" />
+                    </fieldset>
+
+                    <button type="submit" class="newsletter-button-ok submit">Assinar</button>
+                </form>
+            </div>
+        </div><!-- modal END -->
+
+        <vtex:template id="cyclone-V2-commonScripts" />
+        <script type="text/javascript" src="/arquivos/slick.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+              // PopUp Modal //
+                // Fecha Modal //
+                  $('.close-modal').click(function(){
+                    $("body").removeClass("modal-active");
+                  });
+                // Fecha Modal //
+
+                // Fecha Modal na Tecla ESC //
+                  $(document).keyup(function(ev){
+                    if(ev.keyCode == 27)
+                    $("body").removeClass("modal-active");
+                  });
+                // Fecha Modal na Tecla ESC //
+
+              // PopUp Modal //
+            });
+        </script>
+    </body>
+</html>

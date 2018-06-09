@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+	section.stuff-area {
+		li {
+			margin-right: 10px;
+			vertical-align: top;
+			display: inline-block;
+			
+			&:last-child {
+				margin-right: 0;
+			}
+
+			a {
+				svg {
+					@extend .transition;
+
+					&:hover {
+						@extend .transition;
+						width: 45px;
+					}
+				}
+			}
+		}
+	}
+
+	.footer-top-container {
+		clear: both;
+		padding: 40px 0;
+		overflow: hidden;
+		background-color: #252525;
+
+		.top-footer-items {
+			.item {
+				text-align: left;
+
+				h3 {
+					@include font-size(1.4);
+					color: #d4d4d4;
+					margin-bottom: 20px;
+				}
+
+				&:nth-child(4) {
+					text-align: center;
+				}
+
+				&:last-child {
+					text-align: right;
+				}
+
+				&:last-child {
+					span.company {
+						clear: both;
+						color: #d4d4d4;
+						display: block;
+						margin-top: 10px;
+						line-height: 14px;
+					}
+				}
+
+				li {
+					margin-bottom: 10px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+
+					a {
+						color: #d4d4d4;
+					}
+				}
+			}
+
+			@media screen and (max-width: 780px) {
+				.item {
+					width: 100%;
+					margin-bottom: 20px;
+					text-align: left !important;
+				}			
+			}
+		}
+	}
+
+	.bottom-footer-items {
+		clear: both;
+		padding: 10px 0;
+		overflow: hidden;
+
+		.copy {
+			margin-top: 20px;
+
+			address {
+				@include font-size(0.9);
+				color: #3d3d3d;
+				margin-right: 5px;
+				font-style: normal;
+				display: inline-block;
+			}
+
+			a {
+				color: #3d3d3d;
+			}
+		}
+
+		@media screen and (max-width: 780px) {
+			.copy {
+				margin-top: 5px;
+				line-height: 20px;
+				margin-bottom: 15px;
+			}
+
+			.dev {
+				text-align: center;
+			}
+		}
+
+		.dev {
+			text-align: right;
+
+			li {
+				margin-right: 10px;
+				display: inline-block;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

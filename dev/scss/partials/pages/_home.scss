@@ -1,0 +1,334 @@
+/* ==========================================================================
+   Homepage
+   ========================================================================== */
+
+body.home-v2 {
+	main {
+		section{
+			clear: both;
+			overflow: hidden;
+		}
+
+		.prateleiras {
+			li {
+				height: 430px;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			button.slick-prev,
+			button.slick-next {
+				text-indent: -150000px;
+				border: none;
+				background: none;
+
+				&::before{
+					display: none;
+				}
+
+				&::after{
+					top: 100px;
+					content: "";
+					width: 40px;
+					height: 128px;
+					cursor: pointer;
+					position: absolute;
+					display: inline-block;
+					background: url(/arquivos/back-cyclone.png) center center/100% auto no-repeat;
+				}
+			}
+
+			button.slick-prev {
+				&::after {
+					left: 5px;
+				}
+			}
+
+			button.slick-next {
+				&::after {
+					@include rotate(180deg);
+					right: 5px;
+				}
+			}
+		}
+
+		.banner-off {
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.banner-prateleira {
+			height: 550px;
+			overflow: hidden;
+			position: relative;
+
+			&:hover {
+				.text-banner {
+					@extend .transition;
+					bottom: 210px;
+				}
+			}
+
+			.text-banner {
+				@extend .transition;
+				left: 0;
+				width: 100%;
+				bottom: -250px;
+				position: absolute;
+				text-align: center;
+				padding: 130px 60px 0;
+				text-transform: uppercase;
+
+				.red-opacity {
+					left: 0;
+					top: 100px;
+					width: 100%;
+					height: 80%;
+					opacity: 0.6;
+					position: absolute;
+					background-color: #853A34;
+				}
+
+				.container {
+					z-index: 9999;
+					position: relative;
+				}
+
+				h2 {
+					@include font-size(6);
+					color: #fff;
+				}
+
+				a {
+					@include font-size(1.6);
+					color: #fff;
+					width: 200px;
+					padding: 15px;
+					display: block;
+					margin: 10px auto 0;
+					border: 1px solid #fff;
+				}
+			}
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.tipbar-wrap {
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.banners-top {
+			.slide-wrap {
+				padding: 0 !important;
+
+					ul.slick-dots{
+						display: block;
+					}
+			}
+
+			.slick-prev,
+			.slick-next{
+					display: none !important;
+				}
+			button{
+				display: block;
+				top: 0;
+					ul.slick-dots{
+					top: 0;
+					right:0;
+					}
+				}
+
+			.banner-destaque {
+				text-align: right;
+
+				img{
+					width: 100%;
+					height: auto
+				}
+			}
+		}
+
+		.banners-secundarios{
+			.banner-prateleira {
+				.box-banner {
+					img {
+					    height: auto;
+					    width: 100%;
+					}
+				}
+			}
+		}
+
+		.banners-colecao {
+			.col-md-3 {
+				margin-bottom: 10px;
+
+				img {
+					@extend .transition;
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+
+		.tipbar-wrap{
+			overflow: hidden;
+
+			.block{
+			    background-color: #f7f7f7;
+			    margin: 10px;
+			    overflow: hidden;
+			    padding: 10px;
+
+			    svg, span{
+			    	display: inline-block;
+			    	vertical-align: middle;
+			    }
+
+			    span{
+			    	color: #7d7d7d;
+				    font-size: 11px;
+				    font-weight: 300;
+				    padding-left: 5px;
+				    text-transform: uppercase;
+				    width: 78%;
+			    }
+			}
+		}
+
+		.insta-widget{
+			h2{
+				background: url(/arquivos/insta-title.jpg) no-repeat scroll 0 0 transparent;
+				width: 101px;
+				height: 26px;
+				display: block;
+				margin: 0 auto 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1060px) {
+	body.home-v2 {
+		.insta-widget,
+		.banner-prateleira {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 780px) {
+	body.home-v2 {
+		main {
+			section {
+				&.banners-top {
+					margin-bottom: 20px;
+					button{
+						display: none;
+					}
+				}
+			}
+
+
+
+			.banner-prateleira {
+			    display: block;
+			    height: auto;
+			    margin-bottom: 20px;
+
+			    .text-banner{
+					left: 0;
+					width: 100%;
+				    top: -20px;
+					position: absolute;
+					text-align: center;
+					padding: 130px 20px 0;
+					text-transform: uppercase;
+
+						.red-opacity{
+							left: 0;
+							top: 100px;
+							width: 100%;
+							height: 35%;
+							opacity: .8;
+							position: absolute;
+							background-color: #853A34;
+						}
+
+						h2{
+							 @include font-size(3);
+						}
+			    }
+			}
+
+			.prateleiras {
+				.tabs-destaque,
+				.tabs-lancamento {
+					li {
+						width: 100%;
+						border-right: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 680px) {
+	body.home-v2 {
+		main {
+
+			.banner-off {
+				overflow: hidden;
+				margin-bottom: 20px;
+			}
+
+
+
+			.shelf {
+				height: auto;
+				margin-bottom: 0;
+			}
+
+			.prateleiras {
+				margin-top: 0;
+				padding-top: 0;
+				margin-bottom: 20px;
+
+				h2 {
+					@include font-size(1.7);
+				}
+
+				.tabs-destaque,
+				.tabs-lancamento {
+					li {
+						width: 100%;
+						height: 30px;
+						border-right: none;
+
+						a {
+							@include font-size(1.2);
+							padding: 8px;
+						}
+					}
+				}
+
+				.prateleira {
+					ul {
+						li {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

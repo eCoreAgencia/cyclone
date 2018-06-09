@@ -1,0 +1,440 @@
+<!-- top-box -->
+    <section class="top-box">
+        <div class="container">
+            <div class="row">
+                <div class="desktop-items">
+                    <ul>
+                        <li class="col-xs-4">
+                            <a href="/institucional/fale-conosco">Central de Atendimento</a>
+                        </li>
+                        <li class="col-xs-4 middle-element">
+                            <vtex.cmc:welcomeMessage/>
+                        </li>
+                        <li class="col-xs-4">
+                            <a href="/institucional/franqueado">Seja um Franqueado</a>
+                        </li>
+                    </ul>
+                </div><!-- desktop-items END -->
+                <div class="mobile-items">
+                    <ul>
+                        <li><vtex.cmc:welcomeMessage/></li>
+                        <li>
+                            <a href="/login">Cadastre-se</a>
+                        </li>
+                    </ul>
+                </div><!-- mobile-items END -->
+            </div>
+        </div>
+    </section><!-- top-box END -->
+
+    <section class="middle-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-4 logo">
+                    <a href="/" title="Loja On-Line Cyclone">
+                        <img src="/arquivos/LOGO-cyclone.png" alt="Loja On-Line Cyclone" />
+                    </a>
+                </div><!-- logo END -->
+
+                <div class="col-xs-6 col-sm-6 col-md-5 searchform">
+                    <vtex.cmc:fullTextSearchBox/>
+                    <i class="btn-search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 632.399 632.399"><path d="M255.108 0C119.863 0 10.204 109.66 10.204 244.904c0 135.245 109.659 244.905 244.904 244.905 52.006 0 100.238-16.223 139.883-43.854l185.205 185.176c1.671 1.672 4.379 1.672 5.964.115l34.892-34.891c1.613-1.613 1.47-4.379-.115-5.965L438.151 407.605c38.493-43.246 61.86-100.237 61.86-162.702C500.012 109.66 390.353 0 255.108 0zm0 460.996c-119.34 0-216.092-96.752-216.092-216.092 0-119.34 96.751-216.091 216.092-216.091s216.091 96.751 216.091 216.091-96.751 216.092-216.091 216.092z" fill="#1f1f1f"/></svg>
+                    </i>
+                </div><!-- searchform END -->
+
+                <div class="col-xs-6 col-sm-3 right-items">
+                    <a class="sacola" title="cyclone - Minha sacola"  href="/checkout">
+                        <vtex.cmc:AmountItemsInCart />
+                        <div class="my-bag">
+                            <span>Minha Sacola</span>
+                            <img src="/arquivos/mini-cart.png" alt="Mini-Cart Loja On-Line Cyclone" />
+                        </div>
+                     <!--    <div id="ecore-minicart">
+
+                        </div>-->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section><!-- /middle-box -->
+
+<!-- Menu SidePanel -->
+    <i class="visible-xs open-menu js-open-mobile-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" width="32px" height="20px" viewBox="0 0 124 124" xml:space="preserve"><path d="M112 6H12C5.4 6 0 11.4 0 18s5.4 12 12 12h100c6.6 0 12-5.4 12-12S118.6 6 112 6zM112 50H12C5.4 50 0 55.4 0 62c0 6.6 5.4 12 12 12h100c6.6 0 12-5.4 12-12C124 55.4 118.6 50 112 50zM112 94H12c-6.6 0-12 5.4-12 12s5.4 12 12 12h100c6.6 0 12-5.4 12-12S118.6 94 112 94z" fill="#717171"/></svg>
+    </i>
+    <section id="menu-mob" class="visible-xs side-panel js-menu-mobile">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 sidepanel-header">
+                    <h3 class="col-xs-10 menu-mob-title">Menu</h3>
+                    <i class="col-xs-2 close-menu mobile js-close-mobile-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 212.982 212.982" xml:space="preserve" width="17px" height="17px"><path d="M131.804 106.491l75.936-75.936c6.99-6.99 6.99-18.323 0-25.312 -6.99-6.99-18.322-6.99-25.312 0l-75.937 75.937L30.554 5.242c-6.99-6.99-18.322-6.99-25.312 0 -6.989 6.99-6.989 18.323 0 25.312l75.937 75.936L5.242 182.427c-6.989 6.99-6.989 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0l75.937-75.937 75.937 75.937c6.989 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.322 0-25.312L131.804 106.491z" fill="#000"/></svg>
+                    </i>
+                </div>
+                <nav class="col-xs-12 sidepanel-content">
+                    <ul class="menu-list-sidepanel">
+                        <li class="menu-item-sidepanel has-sub">
+                            <a title="Loja On-line Cyclone - Masculino" href="/masculino?O=OrderByReleaseDateDESC" class="menu-anchor-sidepanel">Masculino</a>
+                            <ul class="submenu-sidepanel tipo">
+                                <li>
+                                    <a href="/masculino/camisa?O=OrderByReleaseDateDESC">Camisa</a>
+                                </li>
+                                <li>
+                                    <a href="/masculino/camisa-polo?O=OrderByReleaseDateDESC">Camisa Polo</a>
+                                </li>
+                                <li>
+                                    <a href="/masculino/camisa-tecido?O=OrderByReleaseDateDESC">Camisa Tecido</a>
+                                </li>
+                                <li>
+                                    <a href="/masculino/regata?O=OrderByReleaseDateDESC">Regata</a>
+                                </li>
+                                <li>
+                                    <a href="/masculino/casaco-e-jaqueta?O=OrderByReleaseDateDESC">Casaco e Jaqueta</a>
+                                </li>
+                                <li>
+                                    <a href="/masculino/bermuda-veludo?O=OrderByReleaseDateDESC">Bermuda veludo</a>
+                                </li>
+                                <li>
+                                    <a href="/masculino/bermuda-agua?O=OrderByReleaseDateDESC">Bermuda Água</a>
+                                </li>
+                                <li>
+                                    <a href="/masculino/bermuda-jeans?O=OrderByReleaseDateDESC">Bermuda Jeans</a>
+                                </li>
+                                <li>
+                                    <a href="/masculino/bermuda-passeio?O=OrderByReleaseDateDESC">Bermuda Passeio</a>
+                                </li>
+                                <li>
+                                    <a href="/masculino/calca?O=OrderByReleaseDateDESC">Calça</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-sidepanel has-sub">
+                            <a title="Loja On-line Cyclone - Feminino" href="/feminino?O=OrderByReleaseDateDESC" class="menu-anchor-sidepanel">Feminino</a>
+                            <ul class="submenu-sidepanel tipo">
+                                <li>
+                                    <a href="/feminino/blusa?O=OrderByReleaseDateDESC">Blusa</a>
+                                </li>
+                                <li>
+                                    <a href="/feminino/short?O=OrderByReleaseDateDESC">Short</a>
+                                </li>
+                                <li>
+                                    <a href="/feminino/saia?O=OrderByReleaseDateDESC">Saia</a>
+                                </li>
+                                <li>
+                                    <a href="/feminino/vestido?O=OrderByReleaseDateDESC">Vestido</a>
+                                </li>
+                                <li>
+                                    <a href="/feminino/bone?O=OrderByReleaseDateDESC">Boné</a>
+                                </li>
+                                <li>
+                                    <a href="/feminino/calca?O=OrderByReleaseDateDESC">Calça</a>
+                                </li>
+                                <li>
+                                    <a href="/feminino/casaco-e-jaqueta?O=OrderByReleaseDateDESC">Casaco e Jaqueta</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-sidepanel has-sub">
+                            <a title="Loja On-line Cyclone - Infantil" href="/infantil?O=OrderByReleaseDateDESC" class="menu-anchor-sidepanel">Infantil</a>
+                            <ul class="submenu-sidepanel tipo">
+                                <li>
+                                    <a href="/infantil/camiseta?O=OrderByReleaseDateDESC">Camiseta</a>
+                                </li>
+                                <li>
+                                    <a href="/infantil/regata?O=OrderByReleaseDateDESC">Regata</a>
+                                </li>
+                                <li>
+                                    <a href="/infantil/bermuda-agua?O=OrderByReleaseDateDESC">Bermuda Água</a>
+                                </li>
+                                <li>
+                                    <a href="/infantil/bermuda-veludo?O=OrderByReleaseDateDESC">Bermuda veludo</a>
+                                </li>
+                                <li>
+                                    <a href="/infantil/bermuda-passeio?O=OrderByReleaseDateDESC">Bermuda Passeio</a>
+                                </li>
+                                <li>
+                                    <a href="/infantil/calca?O=OrderByReleaseDateDESC">Calça</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-sidepanel has-sub">
+                            <a title="Loja On-line Cyclone - Calçados" href="/calcados?O=OrderByReleaseDateDESC" class="menu-anchor-sidepanel">Calçados</a>
+                            <ul class="submenu-sidepanel tipo">
+                                <li>
+                                    <a href="/calcados/tenis?O=OrderByReleaseDateDESC">Tênis</a>
+                                </li>
+                                <li>
+                                    <a href="/calcados/bota?O=OrderByReleaseDateDESC">Bota</a>
+                                </li>
+                                <li>
+                                    <a href="/calcados/chinelo?O=OrderByReleaseDateDESC">Chinelo</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-sidepanel has-sub">
+                            <a title="Loja On-line Cyclone - Skates" href="/skates?O=OrderByReleaseDateDESC" class="menu-anchor-sidepanel">Skates</a>
+                        </li>
+                        <li class="menu-item-sidepanel has-sub">
+                            <a title="Loja On-line Cyclone - Boné" href="/bone?O=OrderByReleaseDateDESC" class="menu-anchor-sidepanel">Boné</a>
+                            <ul class="submenu-sidepanel tipo">
+                                <li>
+                                    <a href="/bone/aba-reta?O=OrderByReleaseDateDESC">Aba reta</a>
+                                </li>
+                                <li>
+                                    <a href="/bone/microfibra?O=OrderByReleaseDateDESC">Microfibra</a>
+                                </li>
+                                <li>
+                                    <a href="/bone/veludo?O=OrderByReleaseDateDESC">Veludo</a>
+                                </li>
+                                <li>
+                                    <a href="/bone/flex?O=OrderByReleaseDateDESC">Flex</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-sidepanel has-sub">
+                            <a title="Loja On-line Cyclone - Acessórios" href="/acessorios?O=OrderByReleaseDateDESC" class="menu-anchor-sidepanel">Acessórios</a>
+                            <ul class="submenu-sidepanel tipo">
+                                <li>
+                                    <a href="/acessorios/mochila?O=OrderByReleaseDateDESC">Mochila</a>
+                                </li>
+                                <li>
+                                    <a href="/acessorios/meia?O=OrderByReleaseDateDESC">Meia</a>
+                                </li>
+                                <li>
+                                    <a href="/acessorios/oculos?O=OrderByReleaseDateDESC">Óculos</a>
+                                </li>
+                                <li>
+                                    <a href="/acessorios/gorro?O=OrderByReleaseDateDESC">Gorro</a>
+                                </li>
+                                <li>
+                                    <a href="/acessorios/carteiras?O=OrderByReleaseDateDESC">CARTEIRAS</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-sidepanel has-sub">
+                            <a title="Loja On-line Cyclone - Nossas Lojas" href="/institucional/nossas-lojas" class="menu-anchor-sidepanel">Lojas</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+<!-- Menu SidePanel -->
+
+<!-- menu-box -->
+    <section class="hidden-xs menu">
+        <div class="container">
+            <nav>
+                <ul class="menu-list">
+                    <li class="menu-item has-sub">
+                        <a title="Loja On-Line Cyclone - Departmento Masculino" href="/masculino?O=OrderByReleaseDateDESC" class="menu-anchor">MASCULINO</a>
+                        <div class="submenu">
+                            <div class="container">
+                                <div class="row flex">
+                                    <ul>
+                                        <li>
+                                            <a href="/masculino/camisa?O=OrderByReleaseDateDESC">Camisa</a>
+                                        </li>
+                                        <li>
+                                            <a href="/masculino/camisa-polo?O=OrderByReleaseDateDESC">Camisa Polo</a>
+                                        </li>
+                                        <li>
+                                            <a href="/masculino/camisa-tecido?O=OrderByReleaseDateDESC">Camisa Tecido</a>
+                                        </li>
+                                        <li>
+                                            <a href="/masculino/regata?O=OrderByReleaseDateDESC">Regata</a>
+                                        </li>
+                                        <li>
+                                            <a href="/masculino/casaco-e-jaqueta?O=OrderByReleaseDateDESC">Casaco e Jaqueta</a>
+                                        </li>
+                                        <li>
+                                            <a href="/masculino/bermuda-veludo?O=OrderByReleaseDateDESC">Bermuda veludo</a>
+                                        </li>
+                                        <li>
+                                            <a href="/masculino/bermuda-agua?O=OrderByReleaseDateDESC">Bermuda Água</a>
+                                        </li>
+                                        <li>
+                                            <a href="/masculino/bermuda-jeans?O=OrderByReleaseDateDESC">Bermuda Jeans</a>
+                                        </li>
+                                        <li>
+                                            <a href="/masculino/bermuda-passeio?O=OrderByReleaseDateDESC">Bermuda Passeio</a>
+                                        </li>
+                                        <li>
+                                            <a href="/masculino/calca?O=OrderByReleaseDateDESC">Calça</a>
+                                        </li>
+                                    </ul>
+                                    <div class="submenu-items">
+                                        <div class="submenu-banner">
+                                            <vtex.cmc:subMenuMasculino />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item has-sub">
+                        <a title="Loja On-Line Cyclone - Departmento Feminino" href="/feminino?O=OrderByReleaseDateDESC" class="menu-anchor">FEMININO</a>
+                        <div class="submenu">
+                            <div class="container">
+                                <div class="row flex">
+                                    <ul class="submenu-sidepanel tipo">
+                                        <li>
+                                            <a href="/feminino/blusa?O=OrderByReleaseDateDESC">Blusa</a>
+                                        </li>
+                                        <li>
+                                            <a href="/feminino/short?O=OrderByReleaseDateDESC">Short</a>
+                                        </li>
+                                        <li>
+                                            <a href="/feminino/saia?O=OrderByReleaseDateDESC">Saia</a>
+                                        </li>
+                                        <li>
+                                            <a href="/feminino/vestido?O=OrderByReleaseDateDESC">Vestido</a>
+                                        </li>
+                                        <li>
+                                            <a href="/feminino/bone?O=OrderByReleaseDateDESC">Boné</a>
+                                        </li>
+                                        <li>
+                                            <a href="/feminino/calca?O=OrderByReleaseDateDESC">Calça</a>
+                                        </li>
+                                        <li>
+                                            <a href="/feminino/casaco-e-jaqueta?O=OrderByReleaseDateDESC">Casaco e Jaqueta</a>
+                                        </li>
+                                    </ul>
+                                    <div class="submenu-items">
+                                        <div class="submenu-banner">
+                                            <vtex.cmc:subMenuFeminino />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item has-sub">
+                        <a title="Loja On-Line Cyclone Infantil" href="/infantil?O=OrderByReleaseDateDESC" class="menu-anchor">INFANTIL</a>
+                        <div class="submenu">
+                            <div class="container">
+                                <div class="row flex">
+                                    <ul>
+                                        <li>
+                                            <a href="/infantil/camiseta?O=OrderByReleaseDateDESC">Camiseta</a>
+                                        </li>
+                                        <li>
+                                            <a href="/infantil/regata?O=OrderByReleaseDateDESC">Regata</a>
+                                        </li>
+                                        <li>
+                                            <a href="/infantil/bermuda-agua?O=OrderByReleaseDateDESC">Bermuda Água</a>
+                                        </li>
+                                        <li>
+                                            <a href="/infantil/bermuda-veludo?O=OrderByReleaseDateDESC">Bermuda veludo</a>
+                                        </li>
+                                        <li>
+                                            <a href="/infantil/bermuda-passeio?O=OrderByReleaseDateDESC">Bermuda Passeio</a>
+                                        </li>
+                                        <li>
+                                            <a href="/infantil/calca?O=OrderByReleaseDateDESC">Calça</a>
+                                        </li>
+                                    </ul>
+                                    <div class="submenu-items">
+                                        <div class="submenu-banner">
+                                            <vtex.cmc:subMenuInfantil />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item has-sub">
+                        <a title="Loja On-Line Cyclone Calçados" href="/calcados?O=OrderByReleaseDateDESC" class="menu-anchor">CALÇADOS</a>
+                        <div class="submenu">
+                            <div class="container">
+                                <div class="row flex">
+                                    <ul>
+                                        <li>
+                                            <a href="/calcados/tenis?O=OrderByReleaseDateDESC">Tênis</a>
+                                        </li>
+                                        <li>
+                                            <a href="/calcados/bota?O=OrderByReleaseDateDESC">Bota</a>
+                                        </li>
+                                        <li>
+                                            <a href="/calcados/chinelo?O=OrderByReleaseDateDESC">Chinelo</a>
+                                        </li>
+                                    </ul>
+                                    <div class="submenu-items">
+                                        <div class="submenu-banner">
+                                            <vtex.cmc:subMenuCalcados />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item has-sub">
+                        <a title="Loja On-Line Cyclone Skates" href="/skates?O=OrderByReleaseDateDESC" class="menu-anchor">SKATES</a>
+                    </li>
+                    <li class="menu-item has-sub">
+                        <a title="Loja On-Line Cyclone Boné" href="/bone" class="menu-anchor">BONÉ</a>
+                        <div class="submenu">
+                            <div class="container">
+                                <div class="row flex">
+                                    <ul>
+                                        <li>
+                                            <a href="/bone/aba-reta?O=OrderByReleaseDateDESC">Aba reta</a>
+                                        </li>
+                                        <li>
+                                            <a href="/bone/microfibra?O=OrderByReleaseDateDESC">Microfibra</a>
+                                        </li>
+                                        <li>
+                                            <a href="/bone/veludo?O=OrderByReleaseDateDESC">Veludo</a>
+                                        </li>
+                                        <li>
+                                            <a href="/bone/flex?O=OrderByReleaseDateDESC">Flex</a>
+                                        </li>
+                                    </ul>
+                                    <div class="submenu-items">
+                                        <div class="submenu-banner">
+                                            <vtex.cmc:subMenuBone />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item has-sub">
+                        <a title="Loja On-Line Cyclone Acessórios" href="/acessorios?O=OrderByReleaseDateDESC" class="menu-anchor">ACESSÓRIOS</a>
+                        <div class="submenu">
+                            <div class="container">
+                                <div class="row flex">
+                                    <ul>
+                                        <li>
+                                            <a href="/acessorios/mochila?O=OrderByReleaseDateDESC">Mochila</a>
+                                        </li>
+                                        <li>
+                                            <a href="/acessorios/meia?O=OrderByReleaseDateDESC">Meia</a>
+                                        </li>
+                                        <li>
+                                            <a href="/acessorios/oculos?O=OrderByReleaseDateDESC">Óculos</a>
+                                        </li>
+                                        <li>
+                                            <a href="/acessorios/gorro?O=OrderByReleaseDateDESC">Gorro</a>
+                                        </li>
+                                        <li>
+                                            <a href="/acessorios/carteiras?O=OrderByReleaseDateDESC">CARTEIRAS</a>
+                                        </li>
+                                    </ul>
+                                    <div class="submenu-items">
+                                        <div class="submenu-banner">
+                                            <vtex.cmc:subMenuAcessorios />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item has-sub">
+                        <a title="Loja On-Line Cyclone Lojas" href="/institucional/nossas-lojas" class="menu-anchor">LOJAS</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section><!-- /menu-box -->

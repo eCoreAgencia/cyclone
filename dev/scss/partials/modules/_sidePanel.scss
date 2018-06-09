@@ -1,0 +1,146 @@
+/* ==========================================================================
+   SidePanel
+   ========================================================================== */
+
+.open-menu{
+    top: 55px;
+    left: 20px;
+    z-index: 999;
+    cursor: pointer;
+	position: absolute;
+
+    svg {
+	    fill: #ec7c00;
+	}
+}
+
+.side-panel {
+	top: 0;
+	width: 80%;
+	color: #fff;
+	height: 100%;
+	right: -1000px;
+	z-index: 99999;
+	position: fixed;
+	max-width: 260px;
+	overflow: hidden;
+	background-color: #707070;
+	transition-duration: .4s;
+	transition-timing-function: ease;
+	transition-property: left box-shadow;
+	-webkit-overflow-scrolling: touch;
+	transition: right .3s ease;
+
+	.submenu-sidepanel {
+		padding: 10px 18px;
+		
+		li {
+			margin-bottom: 10px;
+
+			a {
+				@include font-size(1.2);
+				color: #000;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&--open {
+		right: 0;
+		box-shadow: 0 0 50px rgba(#000, .4);
+		transition-duration: .4s;
+		transition-timing-function: ease;
+		transition-property: left box-shadow;
+		-webkit-overflow-scrolling: touch;
+		transition: right .3s ease;
+	}
+
+	.sidepanel-header{
+		padding: 10px 0 10px 10px;
+
+		.menu-mob-title {
+		    font-size: 13px;
+		    padding-top: 6px;
+		    font-weight: 400;
+		}
+	}
+
+	.sidepanel-content{
+		padding: 0;
+
+		li.menu-item-sidepanel{
+			background-color: #f2f0f0;
+			border-bottom: 1px solid #707070;
+
+			a.menu-anchor-sidepanel{
+				color: #000;
+			    display: block;
+			    font-size: 13px;
+			    font-weight: 300;
+			    padding: 10px 18px;
+			    text-decoration: none;
+			    cursor: pointer;
+			}
+
+			&.has-sub{
+				a{
+					&:after{
+				    	content: "+";
+				    	float: right;
+				    	font-weight: 400;
+				    }
+
+				    &.active{
+				    	&:after{
+					    	content: "-";
+					    	float: right;
+					    	font-weight: 400;
+					    }
+				    }
+				}
+			}
+
+			.submenu-sidepanel{
+				display: none;
+				background-color: #fff;
+
+				nav{
+					li{
+						a{
+							color: #000;
+						    display: block;
+						    font-size: 13px;
+						    font-weight: 300;
+						    padding: 10px 18px;
+						    text-decoration: none;
+						    cursor: pointer;
+
+						    &:after{
+						    	content: "";
+						    }
+						}
+
+						&:first-child{
+							a{
+								font-size: 11px;
+					    		font-weight: bold;
+							}
+					    }
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.open-menu {
+		top: 55px;
+	}
+}
+
+@media screen and (max-width: 358px) {
+	.open-menu {
+		top: 67px;
+	}
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    <head>
+        <title><vtex.cmc:productPageTitle /></title>
+        <vtex:metaTags/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <vtex:template id="cyclone-V2-commonStyles" />
+    </head>
+    <body>
+
+        <header>
+            <vtex:template id="cyclone-V2-header" />
+        </header>
+
+        <main>
+            <div class="container">
+
+                <div class="row">
+                    <vtex.cmc:breadCrumb />
+                </div>
+
+                <div class="row">
+                    <section class="product-view">
+                        <section class="product-box col-xs-12 col-md-6">
+                            <vtex.cmc:ProductImage zoom="on" />
+                        </section><!-- product-box END -->
+
+                        <section class="buy-box col-xs-12 col-md-6">
+                            <vtex.cmc:productName />
+
+                            <div class="choose-skus">
+                                <vtex.cmc:skuRichSelection changeImage="1" />
+                            </div>
+
+                            <div class="price-info">
+                                <div class="unidade">
+                                    <vtex.cmc:skuPrice/>
+                                </div>
+                                <div class="tabela-de-medidas call_modal">
+                                    <span>Tabela de Medidas</span>
+                                </div>
+                                <section class="button-e-frete">
+                                    <vtex.cmc:BuyButton />
+                                    <div class="frete-produto">
+                                    <vtex.cmc:shippingValue/>
+                                    </div>
+                                </section>
+                            </div><!-- price-info END -->
+
+                        </section><!-- buy-box END -->
+                    </section><!-- product-view END -->
+                </div>
+            </div>
+
+            <section class="row product-info">
+                <div class="container">
+                    <div class="desc col-xs-12 col-md-6">
+                        <h2 class="tlt-row">Descrição</h2>
+                        <vtex.cmc:ProductDescription/>
+                    </div>
+                    <div class="frete col-xs-12 col-md-6">
+                        <vtex.cmc:shippingValue/>
+                    </div>
+                </div>
+            </section><!-- product-info END -->
+
+            <section class="shelf prateleiras shelfQVVT" style="text-align: center;">
+                <div class="container">
+                    <h3>Produtos Também Vistos</h3>
+                    <vtex:contentPlaceHolder id="ColecaoQVVT" />
+                </div>
+            </section><!-- shelfQVVT END -->
+
+            <section class="shelf prateleiras shelfSimilares" style="text-align: center;">
+                <div class="container">
+                    <h3>Sugestões</h3>
+                    <vtex:contentPlaceHolder id="Sugestoes" />
+                </div>
+            </section><!-- shelfSimilares END -->
+
+        </main>
+
+        <footer>
+            <vtex:template id="cyclone-V2-footer" />
+        </footer>
+
+        <!-- PopUp Newsletter -->
+        <div class="modal hidden-xs hidden-sm">
+            <div class="opacity"></div>
+            <span class="close-modal">FECHAR</span>
+            <div class="modal-container" style="background-color: #fff; text-align: center; height: 540px;">
+                <vtex:contentPlaceHolder id="tabelaDeMedidas" />
+            </div>
+        </div><!-- modal END -->
+
+        <vtex:template id="cyclone-V2-commonScripts" />
+        <script type="text/javascript" src="/arquivos/api-consult.js"></script>
+        <script type="text/javascript" src="/arquivos/buy-together.js"></script>
+        <script type="text/javascript" src="/arquivos/skurichSel-nvcheckout-2.js"></script>
+        <script type="text/javascript" src="/arquivos/product.js"></script>
+    </body>
+</html>

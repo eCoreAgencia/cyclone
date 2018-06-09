@@ -1,0 +1,73 @@
+/* ========================================================================
+	Menu Persistente
+	======================================================================= */
+	
+header {
+	position: relative;
+	
+	&.menu-persistente {
+		@extend .transition;
+		top: 0;
+		width: 100%;
+		opacity: 0.9;
+		display: none;
+		position: fixed;
+		z-index: 9999999999999;
+		background-color: #fff;
+
+		@include mq($screen-md) {
+			display: block;
+		}
+
+		.middle-box {
+			padding: 10px 0;
+		}
+
+		.logo {
+			@extend .transition;
+			padding-top: 0;
+
+			svg {
+				@extend .transition;
+				width: 225px;
+				height: auto;
+			}
+		}
+
+		.top-box {
+			display: none;
+		}
+
+		.right-items {
+			.top-items {
+				display: none;
+			}
+
+			.bottom-items {
+				padding: 20px 0;
+
+				.sacola {
+					#ecore-minicart {
+						top: 60px;
+					}
+				}
+			}
+		}
+
+		.menu {
+			@extend .transition;
+			padding: 15px 0;
+			-webkit-box-shadow: 0px 2px 15px -3px rgba(0,0,0,0.84);
+			-moz-box-shadow: 0px 2px 15px -3px rgba(0,0,0,0.84);
+			box-shadow: 0px 2px 15px -3px rgba(0,0,0,0.84);
+
+			li {
+				&.menu-item {
+					.submenu {
+						top: 29px;
+					}
+				}
+			}
+		}
+	}
+}

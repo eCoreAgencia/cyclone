@@ -1,0 +1,42 @@
+#set($id = $product.Id)
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+#if ($product.IsInStock)
+    #set($availability = 'in-stock')
+#else
+    #set($availability = 'not-available')
+#end
+
+<a title="$escapedName" href="$uri" class="productShelf $product.DepartmentName" data="$product.Id" categorydata="$product.CategoryName" departamentdata="$product.DepartmentName">
+    <span class="principal">$product.GetImageTag(30)</span>
+    <span class="secundario">$product.GetImageTag(30,"foto2")</span>
+    <article>
+        <h3>$product.Name</h3>
+
+        #if ($product.IsInStock)
+            #if ($product.HasBestPrice)
+                <span class="oldPrice" style="margin: 10px 0;">de: $product.ListPrice</span>
+                <span class="bestPrice redPrice">por: $product.BestPrice</span>
+            #else
+                <span class="bestPrice">por: $product.BestPrice</span>
+            #end
+            <em class="installment">
+                #if ($product.NumbersOfInstallment > 1)
+                    ou ${product.NumbersOfInstallment}X de $product.InstallmentValue
+                    #else
+                    <span>à vista</span>
+                #end
+            </em>
+        </article>
+        <section class="produto-cor" id_produto="$product.Id"></section>
+        <span class="flag-discount">$product.ListPriceMinusBestPriceInPercent</span>
+        <article class="action-buttons">
+            <section id_produto="$product.Id" class="produto-cor"></section>
+            <a href="$uri" data-id="$product.Id" class="btn btn-fast-buy"><span>+ Ver mais</span></a>
+        </article>
+        #else
+            <span class="outOfStock">Produto Esgotado</span>
+        #end
+    </article>
+</a>

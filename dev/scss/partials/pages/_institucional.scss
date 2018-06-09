@@ -1,0 +1,170 @@
+/* ==========================================================================
+   Institucional
+   ========================================================================== */
+
+body.institucional {
+
+	main {
+		overflow: hidden;
+	}
+
+	footer {
+		margin-top: 40px;
+	}
+
+	.main-institucional__sidebar {
+		margin-left: 12px;
+
+		@include mq($screen-md) {
+			margin-left: 0;
+			margin-top: 35px;
+		}
+
+		ul {
+			margin-bottom: 20px;
+			padding-right: 20px;
+			list-style-type: none;
+			border-bottom: 1px solid #ccc;
+			
+			li {
+				margin-bottom: 10px;
+
+				&.tlt-list {
+					@include font-size(1.4);
+					font-weight: bold;
+				}
+
+				&:last-child {
+					display: none;
+					margin-bottom: 0;
+					padding-bottom: 0;
+					border-bottom: none;
+				}
+
+				a {
+					@include font-size(1);
+					color: #333;
+					text-decoration: none;
+
+					&:hover,
+					&.active {
+						color: #34508d;
+						font-weight: bold;
+					}
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	.main-institucional__content {
+
+		.loja {
+				width: 100%;
+		    	text-align: center;
+			@include mq($screen-md) {
+				width: 30%;
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+		.std {
+			@include font-size(1.4);
+			line-height: 20px;
+			text-transform: none;
+
+			p {
+				margin-bottom: 10px;
+			}
+
+			h2 {
+
+				text-align: center;
+				@include mq($screen-md) {
+				@include font-size(2.2);
+				line-height: 32px;
+				margin-bottom: 10px;
+				}
+			}
+		}
+
+		ul {
+			margin-top: 10px;
+			padding-left: 20px;
+
+			li {
+				@include font-size(1.4);
+				margin-bottom: 10px;
+				text-transform: lowercase;
+			}
+		}
+	}
+
+	h2 {
+		@include font-size(3);
+		color: #666;
+	    text-align: center;
+	    font-weight: 400;
+	    margin: 30px auto;
+	    text-transform: uppercase;
+		@include mq($screen-md) {
+		@include font-size(3);
+		color: #666;
+	    text-align: left;
+	    font-weight: 400;
+	    margin: 30px auto;
+	    text-transform: uppercase;
+		}
+	}
+
+	article {
+		h3{
+			margin-top: 10px;
+		}
+
+		p {
+			line-height: 25px;
+			font-size: 14px;
+		    font-weight: 300;
+		    text-transform: none;
+		}
+
+		span{
+			display: block;
+		    font-size: 10px;
+		    font-weight: 400;
+		    line-height: 14px;
+		    margin: 5px 0 20px;
+		    text-transform: uppercase;
+		}
+
+
+		strong {
+		    display: block;
+		    line-height: 20px;
+		    margin: 15px 0 0;
+		}
+
+		img {
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+body.quem-somos{
+	article{
+
+		p{
+			margin-top: 30px;
+		}
+		
+		img{
+			float: right; 
+		}
+	}
+}
+

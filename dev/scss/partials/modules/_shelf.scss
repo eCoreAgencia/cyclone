@@ -1,0 +1,280 @@
+/* ==========================================================================
+   Shelf
+   ========================================================================== */
+
+body.home-v2 {
+
+
+	.shelf {
+		height: 430px;
+		display: none;
+		overflow: hidden;
+		margin-bottom: 10px;
+		font-family: 'Roboto', sans-serif;
+		&.active {
+			display: block;
+		}
+	}
+
+	.prateleiras {
+		padding: 10px 0;
+		overflow: hidden;
+		margin-top: 10px;
+		position: relative;
+		font-family: 'Roboto', sans-serif;
+
+		h2 {
+			@include font-size(2.6);
+			font-weight: 300;
+			text-align: center;
+			position: relative;
+			margin-bottom: 20px;
+			font-family: 'Roboto', sans-serif;
+		}
+
+
+		.tabs-destaque,
+		.tabs-lancamento {
+			width: 100%;
+			margin-bottom: 30px;
+			border: 1px solid #000;
+
+			li {
+				@extend .transition;
+				width: 33.3%;
+				height: 40px;
+				text-align: center;
+				vertical-align: top;
+				display: inline-block;
+				border-right: 1px solid #000;
+
+				&:hover {
+					@extend .transition;
+					a {
+						@extend .transition;
+						color: #fff;
+					}
+				}
+
+				&:last-child {
+					border-right: none;
+				}
+
+				a {
+					@include font-size(2);
+					color: #000;
+					width: 100%;
+					padding: 10px;
+					cursor: pointer;
+					display: inline-block;
+					text-transform: uppercase;
+
+					&:hover,
+					&.active {
+						color: #fff;
+						background-color: #000;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 560px) {
+		.prateleiras {
+			h2 {
+				&:before,
+				&:after {
+					width: 20%;
+				}
+			}
+		}
+	}
+
+	.shelf{
+		.prev-arrow,
+		.next-arrow {
+			top: 50%;
+			cursor: pointer;
+			position: absolute;
+		}
+
+		.prev-arrow {
+			left: 50px;
+		}
+
+		.next-arrow {
+			right: 50px;
+		}
+	}
+}
+
+.prateleiras {
+	.prateleira {
+		h2 {
+			display: none;
+		}
+
+		ul {
+			list-style-type: none;
+
+			li {
+				width: 100%;
+				height: 355px;
+				overflow: hidden;
+				position: relative;
+				margin-right: 10px;
+				margin-bottom: 30px;
+				vertical-align: top;
+				list-style-type: none;
+				display: inline-block;
+
+				.installment {
+					font-style: normal;
+				}
+
+				span.principal {
+					@extend .transition;
+				}
+
+				&:hover {
+					span.principal {
+						@extend .transition;
+						opacity: 0;
+					}
+					span.secundario {
+						@extend .transition;
+						opacity: 1;
+					}
+				}
+
+				span.principal.important {
+					opacity: 1 !important;
+				}
+
+				span.secundario {
+					@extend .transition;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					position: absolute;
+					width: 100%
+				}
+
+				&:hover {
+					.action-buttons {
+						.btn-fast-buy {
+							@extend .transition;
+							bottom: 120px;
+						}
+					}
+				}
+
+				a {
+					color: #000;
+
+					h3 {
+						@include font-size(1.4);
+						line-height: 20px;
+						text-align: center;
+						margin-bottom: 03px;
+						text-transform: uppercase;
+					}
+
+					.oldPrice{
+						@include font-size(1.2);
+						clear: both;
+						display: block;
+						font-style: normal;
+						text-align: center;
+						text-decoration: line-through;
+					}
+
+					.bestPrice,
+					.installment {
+						@include font-size(1.2);
+						clear: both;
+						display: block;
+						font-style: normal;
+						text-align: center;
+					}
+
+					.bestPrice {
+						@include font-size(1.4);
+						margin-bottom: 10px;
+					    font-weight: 500;
+					}
+				}
+
+				.action-buttons {
+					.btn-fast-buy {
+						@extend .transition;
+						width: 100%;
+						height: 40px;
+						opacity: 0.8;
+						padding: 20px;
+						bottom: -90px;
+						display: block;
+						position: relative;
+						background-color: #000;
+
+						span {
+							@include font-size(1.6);
+							top: 13px;
+							left: 50%;
+							color: #fff;
+							font-weight: bold;
+							position: absolute;
+							margin-left: -50px;
+							text-transform: uppercase;
+						}
+					}
+				}
+
+				.produto-cor {
+					width: 100%;
+					bottom: 180px;
+					position: absolute;
+					text-align: center;
+
+					.quadrado {
+						margin-right: 10px;
+						vertical-align: top;
+						display: inline-block;
+
+						img {
+							width: 30px;
+							height: 30px;
+						}
+
+						&:last-of-type {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.flag-discount {
+	@include font-size(1.3);
+	@include border-radius(50%);
+	top: 0;
+	left: 10px;
+	width: 45px;
+	color: #fff;
+	height: 45px;
+	padding-top: 8px;
+	font-weight: 700;
+	position: absolute;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	background-color: #b90c00;
+
+	&:after {
+		@include font-size(1.6);
+		content: 'OFF';
+		display: block;
+		margin-top: 3px;
+	}
+}
